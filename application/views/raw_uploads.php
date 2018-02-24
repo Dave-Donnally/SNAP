@@ -57,7 +57,7 @@
 				echo '<form id="checkbox_form" name="checkbox_form" method="post" action="raw_uploads/submit_files" >';
 				//echo '<form id="checkbox_form" name="checkbox_form" method="post" action="/submit_files">';
 				echo "<input type='checkbox' name='select_all' onClick='selectAll(this)' > Select All<br/>";
-				foreach($files as $file => $file_name)
+				foreach($files as  $file =>  $file_name)
 				{
 					$file_parts=pathinfo($file_name);
 					if($file_parts['extension']=="txt")//Check File Extensions, display only produced files
