@@ -74,6 +74,8 @@ Contents
 1.0 Introduction
 1.1 Purpose
 The purpose of this document is to describe the requirements and specifications for the Semantic Network Analysis Pipeline (SNAP) project improvements. This document will clarify the features that will be realized by the completion of this project. The constraints, assumptions, and external dependencies of the software project will be detailed in congruence with the feature descriptions. This document is intended to be used as a reference for the agreement between the project sponsors and software contractors. 
+
+
 1.2 Scope 	 
 Semantic Network Analysis Pipeline (SNAP) is a web based application designed to analyze linguistics of written word and show how words and word groupings are related. Users upload a raw .txt file to undergo Natural Language Processing(NLP). User’s select the desired toolkits to perform stemming, tokenization, lemmatization, sentence splitting, parts of speech recognition, and named entity recognition. A user can then generate an undirected graph data structure file representing the network of words from the text body. This stage is called the Network Generation. The network generation file aids the application in the Network Analysis stage. During this stage, the application outputs a file that can be used in Gephi for viewing the organized body of text in a graph. Additionally, the file can be used to perform the Network Visualization stage. During the Network Visualization stage, the previously generated files are used to generate a file that can be used in Partiview for visualizing the network of words.
 
@@ -89,6 +91,9 @@ The purpose of SNAP is to analyze the linguistics of written word and show how w
   This program works on using special language analysis toolkits and is designed to tokenize words and decipher the relationships between those words in a meaningful way for a human user.
   The program uses a java back end with a website user interface using PHP as the connection between the user interface and the language processing functionality.
 
+[Figure 1]
+[Figure 2]
+[Figure 3]
 
 3.0 Features
 This section describes the specifications of the features of the SNAP project. 
