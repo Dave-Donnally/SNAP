@@ -87,7 +87,7 @@ NLP: Natural Language Processing
 2.0 Project Description
 The purpose of SNAP is to analyze the linguistics of written word and show how words and word groupings are related.
   This program works on using special language analysis toolkits and is designed to tokenize words and decipher the relationships between those words in a meaningful way for a human user.
-  The program uses a java back end with a website user interface using PHP as the connection between the user interface and the language processing functionality
+  The program uses a java back end with a website user interface using PHP as the connection between the user interface and the language processing functionality.
 
 
 3.0 Features
@@ -182,8 +182,10 @@ Dependencies: None
 4.2 Multithreading File Processing Requirements
 These requirements are related to the effort to transition the application to a multithreaded application. This effort will improve the speed of the file processing. 
 
+For features 2.1 - 2.4 we will evaluate each stage and figure out if it is possible to implement multi threading and if possible we will implement it.
+
 REQ-2.1
-Description: The application should multithread upload/ NLP stage processing so multiple files can process more quickly.
+Description: The application should multithread upload/ NLP stage processing so multiple files can process more quickly. We will evaluate each stage
 Assumptions: The application processing functions are coded in such a way that they can be multithreaded.
 Dependencies: None
 
