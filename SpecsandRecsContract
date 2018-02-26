@@ -2,7 +2,7 @@
 For Semantic Network Analysis Pipeline
 Improvement Project
 
-Version 0.0
+Version 2.0
 
 Prepared by
 Patricia Reilly
@@ -17,20 +17,29 @@ Dr. Martin Cenek
 
 SNAP Improvement Project Contract
 BACKGROUND
-	Semantic Network Analysis Pipeline (SNAP) is a natural language analysis program that specializes in finding the relationships between words in written documents. This program works on using special language analysis toolkits such as the Natural Language Toolkit. This software is designed to tokenize words and decipher the relationships between those words in a meaningful way for a human user.
+	Semantic Network Analysis Pipeline (SNAP) is a natural language analysis program that specializes in finding the relationships between words in written documents.
+	 This program works on using special language analysis toolkits such as the Natural Language Toolkit. 
+	 This software is designed to tokenize words and decipher the relationships between those words in a meaningful way for a human user.
 STATEMENT OF WORK
 	Continuing work on this project will be separated into three distinct feature sets.
 
 Feature enhancements:
-	SNAP requires several features and enhancements to make the program run faster with multithreading of the document processing. Providing relevant data on the frequency that words show up and the frequency of how often word groupings appear in the uploaded documents. This frequency is an important update as it will provide information on a proper heuristic for filtering out filler words from the processed documents. Additionally, there is a desire to be able to cancel the processing of documents to save time and prevent accidental results being formed.
+	SNAP requires several features and enhancements to make the program run faster with multithreading of the document processing. 
+	Providing relevant data on the frequency that words show up and the frequency of how often word groupings appear in the uploaded documents.
+	 This frequency is an important update as it will provide information on a proper heuristic for filtering out filler words from the processed documents.
+	 Additionally, there is a desire to be able to cancel the processing of documents to save time and prevent accidental results being formed.
 
 Language Analysis Frameworks
- 	The desire has been expressed to have additional language processing frameworks added to SNAP. Currently we have identified several potential candidates to be implemented. We will look at finding one that fits the needs of the project the best and implement that framework.
+ 	The desire has been expressed to have additional language processing frameworks added to SNAP. Currently we have identified several potential candidates to be implemented. 
+ 	We will look at finding one that fits the needs of the project the best and implement that framework.
 
 Various Bug fixes
-SNAP has several outstanding bugs and quality of life improvements for usability that will make the program much more stable and usable. The known errors consist of fixing file Upload, Network frequency threshold bounds error, and the upload settings Combobox Dependency Errors. In addition to these errors there were several things that were identified to improve the quality of life for the user, these consisted of indicating file upload and file processing had been completed, this along with a cancel button to cancel a long running process was also requested
+SNAP has several outstanding bugs and quality of life improvements for usability that will make the program much more stable and usable. 
+The known errors consist of fixing file Upload, Network frequency threshold bounds error, and the upload settings Combobox Dependency Errors. 
+In addition to these errors there were several things that were identified to improve the quality of life for the user, these consisted of 
+indicating file upload and file processing had been completed.
 	
-SNAP’s features and our work plan is described in greater detail in the requirements section of the document.
+SNAP's features and our work plan is described in greater detail in the requirements section of the document.
 
 Signatures 
 
@@ -66,7 +75,7 @@ Contents
 1.1 Purpose
 The purpose of this document is to describe the requirements and specifications for the Semantic Network Analysis Pipeline (SNAP) project improvements. This document will clarify the features that will be realized by the completion of this project. The constraints, assumptions, and external dependencies of the software project will be detailed in congruence with the feature descriptions. This document is intended to be used as a reference for the agreement between the project sponsors and software contractors. 
 1.2 Scope 	 
-Semantic Network Analysis Pipeline (SNAP) is a web based application designed to analyze linguistics of written word and show how words and word groupings are related. User’s upload a raw .txt file to undergo Natural Language Processing(NLP). User’s select the desired toolkits to perform stemming, tokenization, lemmatization, sentence splitting, parts of speech recognition, and named entity recognition. A user can then generate an undirected graph data structure file representing the network of words from the text body. This stage is called the Network Generation. The network generation file aids the application in the Network Analysis stage. During this stage, the application outputs a file that can be used in Gephi for viewing the organized body of text in a graph. Additionally, the file can be used to perform the Network Visualization stage. During the Network Visualization stage, the previously generated files are used to generate a file that can be used in Partiview for visualizing the network of words.
+Semantic Network Analysis Pipeline (SNAP) is a web based application designed to analyze linguistics of written word and show how words and word groupings are related. Users upload a raw .txt file to undergo Natural Language Processing(NLP). User’s select the desired toolkits to perform stemming, tokenization, lemmatization, sentence splitting, parts of speech recognition, and named entity recognition. A user can then generate an undirected graph data structure file representing the network of words from the text body. This stage is called the Network Generation. The network generation file aids the application in the Network Analysis stage. During this stage, the application outputs a file that can be used in Gephi for viewing the organized body of text in a graph. Additionally, the file can be used to perform the Network Visualization stage. During the Network Visualization stage, the previously generated files are used to generate a file that can be used in Partiview for visualizing the network of words.
 
 Currently, the SNAP application is functional. This project is intended to improve upon the current application. Improvements to SNAP include bug fixes, usability enhancements, adding an additional NLP framework, multithreading the file processing, and adding heuristics for processing parameter selection.
 1.3 Definitions, Acronyms, and Abbreviations
@@ -76,7 +85,9 @@ Sponsor: The Client
 Contractor: Software Developer
 NLP: Natural Language Processing
 2.0 Project Description
-The purpose of SNAP is to analyze the linguistics of written word and show how words and word groupings are related.  This program works on using special language analysis toolkits such as the Natural Language Toolkit. This software is designed to tokenize words and decipher the relationships between those words in a meaningful way for a human user. The program uses a java back end with a website user interface using PHP as the connection between these two parts.
+The purpose of SNAP is to analyze the linguistics of written word and show how words and word groupings are related.
+  This program works on using special language analysis toolkits and is designed to tokenize words and decipher the relationships between those words in a meaningful way for a human user.
+  The program uses a java back end with a website user interface using PHP as the connection between the user interface and the language processing functionality
 
 
 3.0 Features
