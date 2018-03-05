@@ -150,19 +150,26 @@ class Raw_uploads extends CI_Controller{
 	}
 
 	public function submit_files(){
-		if($this->input->post('file_action') == "delete")
-		{
-			$this->delete_files($this->input->post('checkbox'));
-		} 
-		else if($this->input->post('file_action') == "download")
-		{
-			$this->download($this->input->post('checkbox'));
-		} 
-		else
-		{
-			$this->batch_preprocess($this->input->post('checkbox'));
-
-		}
+	    if(is_null($this->input->post('checkbox')))
+	    {
+	        redirect('raw_uploads', 'refresh');//--reload the page
+	    }
+	    else
+	    {
+	        if($this->input->post('file_action') == "delete")
+	        {
+	            $this->delete_files($this->input->post('checkbox'));
+	        }
+	        else if($this->input->post('file_action') == "download")
+	        {
+	            $this->download($this->input->post('checkbox'));
+	        }
+	        else
+	        {
+	            $this->batch_preprocess($this->input->post('checkbox'));
+	            
+	        }
+	    }
 	}
 
 	public function download($files)

@@ -105,6 +105,12 @@ class Preprocessed_uploads extends CI_Controller{
 	}
 	public function submit_files()
 	{
+	    if(is_null($this->input->post('checkbox')))
+	    {
+	        redirect('preprocessed_uploads', 'refresh');//--reload the page    
+	    }
+	    else
+	    {
 			if($this->input->post('file_action') == "delete")
 			{
 				$this->delete_files($this->input->post('checkbox'));
@@ -118,6 +124,7 @@ class Preprocessed_uploads extends CI_Controller{
 				$this->netgen($this->input->post('checkbox'));
 				//$this->netgen($this->input->post('checkbox'));
 			}
+	    }
 	}
 
 	public function download($files)

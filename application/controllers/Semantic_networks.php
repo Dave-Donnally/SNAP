@@ -162,6 +162,12 @@ class Semantic_networks extends CI_Controller
 	}
 	public function submit_files()
 	{
+	    if(is_null($this->input->post('checkbox')))
+	    {
+	        redirect('semantic_networks', 'refresh');//--reload the page
+	    }
+	    else
+	    {
 			if($this->input->post('file_action') == "delete")
 			{
 				$this->delete_files($this->input->post('checkbox'));
@@ -176,8 +182,8 @@ class Semantic_networks extends CI_Controller
 
 				//Call below function to generate individual GEXFs from individual .dl files
 				$this->generateIndividualGEXFs($this->input->post('checkbox'));
-				
-			}		
+			}
+		}		
 	}
 	
 	public function download($files)
