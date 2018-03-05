@@ -58,31 +58,35 @@ class Preprocessed_uploads extends CI_Controller{
 
 	public function netgen($files)
 	{
-		$this->index();
-		$post=$this->input->post();
-		foreach ($files as $file => $file_name)
-		{
-			$netgen_path='/Applications/MAMP/htdocs/SNAP/assets/NetGen/';
-			$output='';
-			$cmd='';
-			$file_path=$this->file_dir.'/preprocessed/'.$file_name.' ';
-			//-------------------Generate .dl files for every file in preprocessed directory----------------------------------//
-			$use_freq= $this->session->userdata('use_freq');
-
-			$freq_lower= $this->session->userdata('freq_lower_bound');
-			$freq_upper= $this->session->userdata('freq_upper_bound');
-			$cmd='java -jar '.$netgen_path.'NetGen.jar '. $file_path.' '.$netgen_path.'stopword.txt '.$use_freq.' '.$freq_lower.' '.$freq_upper;
-
-			//--------debug-----------//
-			$message = "command: ".$cmd;
-			$output=shell_exec($cmd);
-			if($output==''){
-				$output="Netork Generation failed";
-			}
-		}
-		$this->session->set_flashdata('flash_message', 'Saved to Semantic Networks');
-		$this->transfer();//-----Attempt to transfer processed .dl files
-		redirect('preprocessed_uploads', 'refresh');//--reload the page
+	    if(!is_null($files) ) 
+	    {
+    		$this->index();
+    		$post=$this->input->post();
+    		foreach ($files as $file => $file_name)
+    		{
+    			//$netgen_path='/Applications/MAMP/htdocs/SNAP/assets/NetGen/';
+    		    $netgen_path='/\wamp64\www\SNAP\assets\NetGen/';
+    			$output='';
+    			$cmd='';
+    			$file_path=$this->file_dir.'/preprocessed/'.$file_name.' ';
+    			//-------------------Generate .dl files for every file in preprocessed directory----------------------------------//
+    			$use_freq= $this->session->userdata('use_freq');
+    
+    			$freq_lower= $this->session->userdata('freq_lower_bound');
+    			$freq_upper= $this->session->userdata('freq_upper_bound');
+    			$cmd='java -jar '.$netgen_path.'NetGen.jar '. $file_path.' '.$netgen_path.'stopword.txt '.$use_freq.' '.$freq_lower.' '.$freq_upper;
+    
+    			//--------debug-----------//
+    			$message = "command: ".$cmd;
+    			$output=shell_exec($cmd);
+    			if($output==''){
+    				$output="Netork Generation failed";
+    			}
+    		}
+    		$this->session->set_flashdata('flash_message', 'Saved to Semantic Networks');
+    		$this->transfer();//-----Attempt to transfer processed .dl files
+	    }
+		redirect('preprocessed_uploads', 'refresh');//--reload the page    
 	}
 
 	public function display_file(){
