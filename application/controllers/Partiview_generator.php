@@ -84,23 +84,30 @@ class Partiview_generator extends CI_Controller{
 
 	public function submit_files()//For executing commands
 	{
-		if($this->input->post('file_action') == "delete")
-		{
-			$this->delete_files($this->input->post('checkbox'));
-		}
-		else if($this->input->post('file_action') == "download")
-		{
-			$this->download($this->input->post('checkbox'));
-		}
-		else if($this->input->post('file_action') == "kill"){
-			$cmd = "pkill java";
-			shell_exec($cmd);
-			redirect('partiview_generator', 'refresh');
-		}
-		else
-		{
-			$this->partiGeneration($this->input->post('checkbox'));
-		}
+	    if(is_null($this->input->post('checkbox')))
+	    {
+	        redirect('partiview_generator', 'refresh');//--reload the page
+	    }
+	    else
+	    {
+    		if($this->input->post('file_action') == "delete")
+    		{
+    			$this->delete_files($this->input->post('checkbox'));
+    		}
+    		else if($this->input->post('file_action') == "download")
+    		{
+    			$this->download($this->input->post('checkbox'));
+    		}
+    		else if($this->input->post('file_action') == "kill"){
+    			$cmd = "pkill java";
+    			shell_exec($cmd);
+    			redirect('partiview_generator', 'refresh');
+    		}
+    		else
+    		{
+    			$this->partiGeneration($this->input->post('checkbox'));
+    		}
+	    }
 	}
 
 	public function download($files)
