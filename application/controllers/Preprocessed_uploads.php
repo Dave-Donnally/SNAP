@@ -65,7 +65,7 @@ class Preprocessed_uploads extends CI_Controller{
     		foreach ($files as $file => $file_name)
     		{
     			//$netgen_path='/Applications/MAMP/htdocs/SNAP/assets/NetGen/';
-    		    $netgen_path='/\wamp64\www\SNAP\assets\NetGen/';
+    		    $netgen_path='/\wamp64\www\SNAP\assets\NetGen\/';
     			$output='';
     			$cmd='';
     			$file_path=$this->file_dir.'/preprocessed/'.$file_name.' ';

@@ -36,8 +36,10 @@ class Semantic_networks extends CI_Controller
 	public function transfer()//Transfer .dl files to Semantic Networks
 	{
 		$post=$this->input->post();
-		$files=scandir('/Applications/MAMP/htdocs/SNAP');//--output randomly goes to this page, unsure why, so grab it and move it.
-		$source='/Applications/MAMP/htdocs/SNAP/';
+		//$files=scandir('/Applications/MAMP/htdocs/SNAP');//--output randomly goes to this page, unsure why, so grab it and move it.
+		$files=scandir('/\wamp64\www\SNAP\/');
+		//$source='/Applications/MAMP/htdocs/SNAP/';
+		$source='/\wamp64\www\SNAP\/';
 		$destination=$this->file_dir.'/partiview_generator/';
 		$individual_gexf_dest=$destination.'individual_gexfs/';
 		foreach ($files as $file) 
@@ -76,7 +78,8 @@ class Semantic_networks extends CI_Controller
 		$post=$this->input->post();
 	    if($this->session->userdata('logged_in'))
 		{
-			$gephi_path='/Applications/MAMP/htdocs/SNAP/assets/AutoGephiPipe/AutoGephiPipeV3_1.jar ';
+			//$gephi_path='/Applications/MAMP/htdocs/SNAP/assets/AutoGephiPipe/AutoGephiPipeV3_1.jar ';
+			$gephi_path='/\wamp64\www\SNAP\assets\GephiPipe\GephiPipe.jar';
 			$output='';
 			$cmd='';
 			$file_path=$this->file_dir.'/semantic_networks';
@@ -109,8 +112,11 @@ class Semantic_networks extends CI_Controller
 		$this->index();
 		$post=$this->input->post();
 	
-		$gephi_path='/Applications/MAMP/htdocs/SNAP/assets/AutoGephiPipe/AutoGephiPipeV3_1.jar ';
-		$individual_gephi_path='/Applications/MAMP/htdocs/SNAP/assets/AutoGephiPipe/individualGraphProcess.jar ';
+		//$gephi_path='/Applications/MAMP/htdocs/SNAP/assets/AutoGephiPipe/AutoGephiPipeV3_1.jar ';
+		$gephi_path='/\wamp64\www\SNAP\assets\GephiPipe\GephiPipe.jar';
+		//$individual_gephi_path='/Applications/MAMP/htdocs/SNAP/assets/AutoGephiPipe/individualGraphProcess.jar ';
+		$individual_gephi_path='/\wamp64\www\SNAP\assets\GephiPipe\individualGraphProcess.jar';
+		
 		$dir_path=$this->file_dir.'/semantic_networks/';
 
 		//-------------------Generate .gexf file for each .dl file in preprocessed directory----------------------------------//

@@ -40,7 +40,8 @@ class Partiview_generator extends CI_Controller{
 		$this->index();
 		$post=$this->input->post();
 		// TODO relative directory conversion
-		$partiview_path='/Applications/MAMP/htdocs/SNAP/assets/partiViewGen/PartiGen.jar ';
+		//$partiview_path='/Applications/MAMP/htdocs/SNAP/assets/partiViewGen/PartiGen.jar ';
+		$partiview_path='/\wamp64\www\SNAP\assets\partiViewGen\PartiGen.jar';
 		$output='';
 		$cmd='';
 		$gexf_file='';
