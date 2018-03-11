@@ -122,7 +122,7 @@ class Raw_uploads extends CI_Controller{
 		ini_set('max_file_uploads', 20000);
 
 		$config['upload_path'] = $file_dir;
-		$config['allowed_types'] = 'txt';
+		$config['allowed_types'] = '*'; //was txt testing fix for '//' error
 		$config['max_size'] = '1000000';
 
 		$files = $_FILES;
@@ -131,13 +131,15 @@ class Raw_uploads extends CI_Controller{
 		$this->load->library('upload');
 		$this->upload->initialize($config);
 
-		for($i = 0; $i < $file_count; $i++){
+		for($i = 0; $i < $file_count; $i++)
+		{
 			$_FILES['raw_files']['name'] = $files['raw_files']['name'][$i];
 			$_FILES['raw_files']['type'] = $files['raw_files']['type'][$i];
 			$_FILES['raw_files']['tmp_name'] = $files['raw_files']['tmp_name'][$i];
 			$_FILES['raw_files']['size'] = $files['raw_files']['size'][$i];
 			$_FILES['raw_files']['error'] = $files['raw_files']['error'][$i];
 
+			
 			if($this->upload->do_upload('raw_files')){
 				$this->session->set_flashdata('flash_message', 'Upload was successful!');
 			} else{
