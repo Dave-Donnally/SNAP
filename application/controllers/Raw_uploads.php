@@ -139,16 +139,23 @@ class Raw_uploads extends CI_Controller{
 			$_FILES['raw_files']['size'] = $files['raw_files']['size'][$i];
 			$_FILES['raw_files']['error'] = $files['raw_files']['error'][$i];
 
-			
-			if($this->upload->do_upload('raw_files')){
-				$this->session->set_flashdata('flash_message', 'Upload was successful!');
-			} else{
-				$error = array('error' => $this->upload->display_errors());
-				$this->load->view('raw_uploads', $error);
+			$path = $_FILES['raw_files']['name'];
+			$ext = pathinfo($path, PATHINFO_EXTENSION);
+
+			if($ext == 'txt')
+			{
+			    if($this->upload->do_upload('raw_files'))
+			    {
+			        $this->session->set_flashdata('flash_message', $ext);
+			    } 
+			    else
+			    {
+			        $error = array('error' => $this->upload->display_errors());
+			        $this->load->view('raw_uploads', $error);
+			    }
 			}
 		}
 		redirect('raw_uploads', 'refresh');
-		//$this->index();
 	}
 
 	public function submit_files(){
