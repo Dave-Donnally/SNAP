@@ -142,7 +142,7 @@ class Raw_uploads extends CI_Controller{
 			$path = $_FILES['raw_files']['name'];
 			$ext = pathinfo($path, PATHINFO_EXTENSION);
 
-			if($ext == 'txt')
+			if($ext == 'txt')//to fix error with text files having characters in them, but also still filter out all non text files
 			{
 			    if($this->upload->do_upload('raw_files'))
 			    {
