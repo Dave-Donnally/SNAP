@@ -206,11 +206,16 @@ class Raw_uploads extends CI_Controller{
 	    }
 	    else
 	    {
-	        $this->_load_zip_lib();
-	        
-	        $this->zip->add_data($files);
-	        $this->_archieve_and_download('my_info.zip');
-	        
+	        $this->load->library('zip');
+	        foreach($files as $file => $file_name)
+	        {
+	            $file_path=$this->file_dir.'/raw/'.$file_name;
+	            if (file_exists($file_path))
+	            {
+	               $this->zip->read_file($file_path);
+	            }
+	        }
+	        $this->zip->download('files.zip');
 	    }
 
 		// exit;
