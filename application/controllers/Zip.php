@@ -38,7 +38,7 @@ class Zip extends CI_Controller {
          
         $this->zip->add_data($files);
          
-        $this->_archieve_and_download('my_info.zip');
+        $this->_archieve_and_download('Files.zip');
     }
  
     public function data_with_subdirs()
