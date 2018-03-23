@@ -146,7 +146,7 @@ class Raw_uploads extends CI_Controller{
 			{
 			    if($this->upload->do_upload('raw_files'))
 			    {
-			        $this->session->set_flashdata('flash_message', $ext);
+			        $this->session->set_flashdata('flash_message', "Files sucessfully uploaded!");
 			    } 
 			    else
 			    {
@@ -183,25 +183,41 @@ class Raw_uploads extends CI_Controller{
 
 	public function download($files)
 	{
-		foreach($files as $file => $file_name)
-		{
-			$file_path=$this->file_dir.'/raw/'.$file_name;
-			if (file_exists($file_path)) 
-			{
-			    header('Content-Description: File Transfer');
-			    header('Content-Type: application/octet-stream');
-			    header('Content-Disposition: attachment; filename="'.basename($file_path).'"');
-			    header('Expires: 0');
-			    header('Cache-Control: must-revalidate');
-			    header('Pragma: public');
-			    header('Content-Length: ' . filesize($file_path));
-			
-			    readfile($file_path);
-			   // exit;
-			}
-			//exit;
-			
-		}
+	    if(count($files) == 1)
+	    {
+	        foreach($files as $file => $file_name)
+	        {
+	            $file_path=$this->file_dir.'/raw/'.$file_name;
+	            if (file_exists($file_path))
+	            {
+	                header('Content-Description: File Transfer');
+	                header('Content-Type: application/octet-stream');
+	                header('Content-Disposition: attachment; filename="'.basename($file_path).'"');
+	                header('Expires: 0');
+	                header('Cache-Control: must-revalidate');
+	                header('Pragma: public');
+	                header('Content-Length: ' . filesize($file_path));
+	                
+	                readfile($file_path);
+	                // exit;
+	            }
+	            //exit;
+	        }
+	    }
+	    else
+	    {
+	        $this->load->library('zip');
+	        foreach($files as $file => $file_name)
+	        {
+	            $file_path=$this->file_dir.'/raw/'.$file_name;
+	            if (file_exists($file_path))
+	            {
+	               $this->zip->read_file($file_path);
+	            }
+	        }
+	        $this->zip->download('files.zip');
+	    }
+
 		// exit;
 		$this->index();
 	}

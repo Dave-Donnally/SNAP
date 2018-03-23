@@ -99,7 +99,13 @@ The purpose of SNAP is to analyze the linguistics of written word and show how w
 This section describes the specifications of the features of the SNAP project. 
 
 3.1 Bug Fixes/Usability Enhancements
-This feature will improve the usability of the application and fix bugs that prevent the user from completing the pipeline.  The most prominent bug is a failure when uploading a file. Due to the intermittent appearance of this bug, we believe this bug may be due to special character use and unicode characters. The next bug is the frequency bounds checkbox not disabling the parameter. The final bug is the bug seen when a user modifies a combobox on the Upload page that is not in the expected order. The combo boxes following the modified box should reset but they do not. The usability enhancements are related to improving the user’s ability to identify when a file is processing, identifying when a file is completed processing, and cancelling a file process.
+This feature will improve the usability of the application and fix bugs that prevent the user from completing the pipeline.
+The most prominent bug is a failure when uploading a file. Due to the intermittent appearance of this bug, we believe this bug may be due to special character use and unicode characters.
+The next bug is the frequency bounds checkbox not disabling the parameter. The final bug is the bug seen when a user modifies a combobox on the Upload page that is not in the expected order.
+The combo boxes following the modified box should reset but they do not.
+The usability enhancements are related to improving the user’s ability to identify when a file is processing, identifying when a file is completed processing, and cancelling a file process.
+ 
+ 
 3.2 Multithreading File Processing 
 This feature is desired to increase the speed at which the system can process files. By multithreading the application, files can be processed simultaneously rather than sequentially. This process will only improve the processing time when the user is performing processes on multiple files. Otherwise, the application will perform the processing at the time seen currently.
 3.3 Heuristics for Selecting Processing Parameters
