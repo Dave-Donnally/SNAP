@@ -146,7 +146,7 @@ class Raw_uploads extends CI_Controller{
 			{
 			    if($this->upload->do_upload('raw_files'))
 			    {
-			        $this->session->set_flashdata('flash_message', $ext);
+			        $this->session->set_flashdata('flash_message', "Files sucessfully uploaded!");
 			    } 
 			    else
 			    {
