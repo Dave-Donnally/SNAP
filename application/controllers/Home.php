@@ -6,7 +6,7 @@ class Home extends CI_Controller{
 		$this->load->model('user', '', TRUE);
 	}
 
-	public function index(){
+	public function index(){    
 		if($this->session->userdata('logged_in')){
 			//$session_data = $this->session->userdata('logged_in');
 			//$data['email'] = $session_data['email'];
