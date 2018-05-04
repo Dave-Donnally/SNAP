@@ -1,20 +1,8 @@
-# CodeIgniter
-/system/
-/user_guide/
-/index.php
-/readme.rst
-/contributing.md
-/.editorconfig
-/license.txt
-
-# These are machine specific code igniter files
-/application/config/config.php
-/application/config/database.php
-
-*.class
-*.DS_Store
-*.classpath
-*.project
-
-# Eclipse
+assets/preprocess/corenlp/stanford-corenlp-3.6.0-models.jar
+application/config/config.php
+application/config/database.php
+**.DS_Store
 .metadata/
+.recommenders/
+**.class
+**.classpath

@@ -24,7 +24,7 @@ class Partiview_generator extends CI_Controller{
 	{
 		if($this->session->userdata('logged_in'))
 		{
-			$files = array_filter(scandir($this->file_dir . '/partiview_generator'),
+			$files = array_filter(scandir($this->file_dir . '/partiview_generator'), 
 		    function($item)
 			{
 				return !is_dir($this->file_dir.'/' . $item);
@@ -39,23 +39,43 @@ class Partiview_generator extends CI_Controller{
 	{
 		$this->index();
 		$post=$this->input->post();
-		// TODO relative directory conversion
-		//$partiview_path='/Applications/MAMP/htdocs/SNAP/assets/partiViewGen/PartiGen.jar ';
-		$partiview_path='/\wamp64\www\SNAP\assets\partiViewGen\PartiGen.jar';
+		$partiview_path='/Applications/MAMP/htdocs/SNAP/assets/partiViewGen/PartiGen.jar ';
 		$output='';
 		$cmd='';
 		$gexf_file='';
 		$file_dates='';
-
+		
 		$files=scandir($this->file_dir.'/partiview_generator/');
+		foreach ($files as $file) //Set gexf and timestamp files for partiview
+		{
+			$file_parts=pathinfo($file);
+			if($file=="completeLayout.gexf")
+			{
+				$gexf_file=$this->file_dir.'/partiview_generator/' . $file . ' ';
+			}
+			if($file=="FileDates.txt")
+			{
+				$file_dates=$this->file_dir.'/partiview_generator/' . $file ;
+			}
+			else;
+		}
+		//-------------------Generate .dl files for every file in preprocessed directory----------------------------------//
 		$date_range= $this->session->userdata('date_range');
 		$skew_x= $this->session->userdata('skew_x');
 		$skew_y= $this->session->userdata('skew_y');
 		$skew_z= $this->session->userdata('skew_x');
 		$shape= $this->session->userdata('shape');
-		// TODO this call may be wrong, or at least variable names may be wrong
-		$cmd='java -jar '.$partiview_path.$gexf_file.$file_dates.' '.$date_range.' '.$skew_x .' '.$skew_y.' '.$skew_z.' '.$shape;
+		$cmd='java'. ' -jar '. $partiview_path. $gexf_file  . $file_dates . " ". $date_range . " ". $skew_x . " ". $skew_y . " ". $skew_z . " " . $shape ;
+		
+		// if($date_range!="NULL"){
+		// 	$cmd='java'. ' -jar '. $partiview_path. $gexf_file  . $file_dates . " ". $date_range . " ". $skew_x . " ". $skew_y . " ". $skew_z . " " . $shape ;
+		// }
+		// else{
+		// 	$cmd='java'. ' -jar '. $partiview_path. $gexf_file  . $file_dates . " 90";
 
+		// }
+		
+		
 		$output=shell_exec($cmd);
 		if($output=='')
 		{
@@ -65,27 +85,23 @@ class Partiview_generator extends CI_Controller{
 		redirect('partiview_generator', 'refresh');
 	}
 
-	// TODO create a threejsFileGeneration function
-
-	// TODO create function to pass threejs files to client
-	public function pass_threejs_files($projectName)
-	{
-		// this should be called via ajax, and pass back the contents of the
-		// threejs files
-	}
-
 	public function display_file()
 	{
 		$file = $this->uri->segment(3);
 		$file_path = $this->file_dir . "/partiview_generator/" . $file;
-
+		
 		echo nl2br(file_get_contents($file_path));
 		exit;
 	}
 
+
+
+
+
+
 	public function submit_files()//For executing commands
 	{
-	    if(is_null($this->input->post('checkbox')))
+    	if(is_null($this->input->post('checkbox')))
 	    {
 	        redirect('partiview_generator', 'refresh');//--reload the page
 	    }
@@ -113,29 +129,7 @@ class Partiview_generator extends CI_Controller{
 
 	public function download($files)
 	{
-/* 		foreach($files as $file => $file_name)
-		{
-			$file_path=$this->file_dir.'/partiview_generator/'.$file_name;
-			if (file_exists($file_path))
-			{
-			    header('Content-Description: File Transfer');
-			    header('Content-Type: application/octet-stream');
-			    header('Content-Disposition: attachment; filename="'.basename($file_path).'"');
-			    header('Expires: 0');
-			    header('Cache-Control: must-revalidate');
-			    header('Pragma: public');
-			    header('Content-Length: ' . filesize($file_path));
-			    readfile($file_path);
-			    exit;
-			    $this->index();
-			}
-			else
-			{
-				$this->index();
-			}
-		} */
-	    
-	    if(count($files) == 1)
+		    if(count($files) == 1)
 	    {
 	        foreach($files as $file => $file_name)
 	        {
@@ -183,3 +177,6 @@ class Partiview_generator extends CI_Controller{
 		redirect('partiview_generator', 'refresh');
 	}
 }
+
+/* End of file preprocessed_uploads.php */
+/* Location: ./application/controllers/preprocessed_uploads.php */

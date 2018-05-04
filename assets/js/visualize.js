@@ -1,6 +1,6 @@
 var container;
 var camera, controls, scene, renderer, rtTexture;
-var raycaster, mouse;
+var stats, raycaster, mouse;
 var visRunning = false;
 
 var layers = [];
@@ -69,6 +69,8 @@ function init(){
     renderer.setSize( $(container).width(), $(container).height(), false );
 
     container.appendChild( renderer.domElement );
+    stats = new Stats();
+    container.appendChild( stats.dom );
 
     container.addEventListener( 'resize', onWindowResize, false );
     render();
@@ -146,6 +148,7 @@ function onWindowResize() {
 }
 
 function render() {
+    stats.update();
     renderer.render( scene, camera );
 }
 

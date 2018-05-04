@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.2draft" version="1.2" xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2017-06-30">
+    <creator>Gephi 0.8.1</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="eccentricity" title="Eccentricity" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="closnesscentrality" title="Closeness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="betweenesscentrality" title="Betweenness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="modularity_class" title="Modularity Class" type="integer">
+        <default>0</default>
+      </attribute>
+    </attributes>
+    <nodes>
+      <node id="tryworks" label="tryworks">
+        <attvalues>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.3333333333333333"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-1947.8647" y="-1988.1005" z="0.0"></viz:position>
+        <viz:color r="182" g="62" b="62"></viz:color>
+      </node>
+      <node id="Pequod" label="Pequod">
+        <attvalues>
+          <attvalue for="eccentricity" value="0.0"></attvalue>
+          <attvalue for="closnesscentrality" value="0.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-1976.7976" y="-1951.8197" z="0.0"></viz:position>
+        <viz:color r="182" g="62" b="62"></viz:color>
+      </node>
+      <node id="lamps" label="lamps">
+        <attvalues>
+          <attvalue for="eccentricity" value="1.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="1.5"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="100.0"></viz:size>
+        <viz:position x="-2041.8093" y="-2033.3418" z="0.0"></viz:position>
+        <viz:color r="182" g="62" b="62"></viz:color>
+      </node>
+      <node id="dark" label="dark">
+        <attvalues>
+          <attvalue for="eccentricity" value="1.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="1.5"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="100.0"></viz:size>
+        <viz:position x="1977.0817" y="-2039.6957" z="0.0"></viz:position>
+        <viz:color r="62" g="182" b="62"></viz:color>
+      </node>
+      <node id="light" label="light">
+        <attvalues>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.5"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="2022.9183" y="-1960.3043" z="0.0"></viz:position>
+        <viz:color r="62" g="182" b="62"></viz:color>
+      </node>
+      <node id="whaleman" label="whaleman">
+        <attvalues>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.3333333333333333"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="2000.0" y="1992.3606" z="0.0"></viz:position>
+        <viz:color r="62" g="62" b="182"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="tryworks" target="Pequod">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="tryworks" target="lamps">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="lamps" target="Pequod">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="lamps" target="dark">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="dark" target="Pequod">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="light" target="dark">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="whaleman" target="lamps">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="whaleman" target="dark">
+        <attvalues></attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

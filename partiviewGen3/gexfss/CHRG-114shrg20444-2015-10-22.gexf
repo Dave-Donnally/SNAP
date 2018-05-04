@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.2draft" version="1.2" xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2017-06-30">
+    <creator>Gephi 0.8.1</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="node" mode="static">
+      <attribute id="eccentricity" title="Eccentricity" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="closnesscentrality" title="Closeness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="betweenesscentrality" title="Betweenness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="modularity_class" title="Modularity Class" type="integer">
+        <default>0</default>
+      </attribute>
+    </attributes>
+    <nodes>
+      <node id="oversight" label="oversight">
+        <attvalues>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.5"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="1984.7211" y="-2000.0" z="0.0"></viz:position>
+        <viz:color r="186" g="1" b="1"></viz:color>
+      </node>
+      <node id="environment" label="environment">
+        <attvalues>
+          <attvalue for="eccentricity" value="1.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="2.0"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="100.0"></viz:size>
+        <viz:position x="1977.0817" y="1960.3043" z="0.0"></viz:position>
+        <viz:color r="1" g="1" b="186"></viz:color>
+      </node>
+      <node id="regulatory" label="regulatory">
+        <attvalues>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.3333333333333333"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="0"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="2022.9183" y="2039.6957" z="0.0"></viz:position>
+        <viz:color r="1" g="1" b="186"></viz:color>
+      </node>
+      <node id="questions" label="questions">
+        <attvalues>
+          <attvalue for="eccentricity" value="1.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-1977.0817" y="-2039.6957" z="0.0"></viz:position>
+        <viz:color r="1" g="186" b="1"></viz:color>
+      </node>
+      <node id="dc" label="dc">
+        <attvalues>
+          <attvalue for="eccentricity" value="1.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="1.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="60.0"></viz:size>
+        <viz:position x="-2045.8367" y="-2000.0" z="0.0"></viz:position>
+        <viz:color r="1" g="186" b="1"></viz:color>
+      </node>
+      <node id="s" label="s">
+        <attvalues>
+          <attvalue for="eccentricity" value="1.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="2"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="2015.2789" y="-2000.0" z="0.0"></viz:position>
+        <viz:color r="186" g="1" b="1"></viz:color>
+      </node>
+      <node id="ERRATA" label="ERRATA">
+        <attvalues>
+          <attvalue for="eccentricity" value="0.0"></attvalue>
+          <attvalue for="closnesscentrality" value="0.0"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-1954.1633" y="-2000.0" z="0.0"></viz:position>
+        <viz:color r="1" g="186" b="1"></viz:color>
+      </node>
+      <node id="witnesses" label="witnesses">
+        <attvalues>
+          <attvalue for="eccentricity" value="2.0"></attvalue>
+          <attvalue for="closnesscentrality" value="1.5"></attvalue>
+          <attvalue for="betweenesscentrality" value="0.0"></attvalue>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-1977.0817" y="-1960.3043" z="0.0"></viz:position>
+        <viz:color r="1" g="186" b="1"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="oversight" target="environment">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="environment" target="ERRATA">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="regulatory" target="oversight">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="regulatory" target="environment">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="questions" target="dc">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="questions" target="ERRATA">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="dc" target="ERRATA">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="s" target="oversight">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="s" target="environment">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="s" target="dc">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="s" target="ERRATA">
+        <attvalues></attvalues>
+      </edge>
+      <edge source="witnesses" target="dc">
+        <attvalues></attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

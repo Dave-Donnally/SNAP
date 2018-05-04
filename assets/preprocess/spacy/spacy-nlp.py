@@ -95,8 +95,8 @@ def main():
 #BEGIN PREPROCESSING EXECUTION
 main()
 
-#TO KEEP LINE BREAKS Test case
-#with open('lemmaCase-v6.txt', 'r') as f:
+#TO KEEP LINE BREAKS
+#with open('/Users/stc1563/programming/research/test-cases/_raw/lemmaCase-v6.txt', 'r') as f:
 #	strIn=f.read();
 #	for line in f:
 #		tokenSents = nlp(unicode(line,encoding="utf-8"))

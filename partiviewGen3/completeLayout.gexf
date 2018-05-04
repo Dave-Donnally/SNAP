@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.2draft" version="1.2" xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2017-02-15">
+    <creator>Gephi 0.8.1</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" timeformat="date" mode="dynamic">
+    <attributes class="node" mode="static">
+      <attribute id="eccentricity" title="Eccentricity" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="closnesscentrality" title="Closeness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="betweenesscentrality" title="Betweenness Centrality" type="double">
+        <default>0.0</default>
+      </attribute>
+      <attribute id="modularity_class" title="Modularity Class" type="integer">
+        <default>0</default>
+      </attribute>
+    </attributes>
+    <attributes class="edge" mode="dynamic">
+      <attribute id="weight" title="Weight" type="float"></attribute>
+    </attributes>
+
+    <nodes>
+      <node id="a" label="a">
+        <spells>
+          <spell start="2006-02-17" endopen="2006-02-27"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.204855"></viz:size>
+        <viz:position x="25" y="2" z="0.0"></viz:position>
+        <viz:color r="72" g="243" b="52"></viz:color>
+      </node>
+
+      <node id="b" label="b">
+        <spells>
+          <spell start="2006-02-17" endopen="2006-02-27"></spell>
+        </spells>
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="22" y="10" z="0.0"></viz:position>
+        <viz:color r="243" g="52" b="93"></viz:color>
+      </node>
+
+      <node id="c" label="c" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.167027"></viz:size>
+        <viz:position x="16" y="12" z="0.0"></viz:position>
+        <viz:color r="193" g="243" b="52"></viz:color>
+      </node>
+      <node id="d" label="d" start="2006-02-17" endopen="2006-02-27">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="21.343832"></viz:size>
+        <viz:position x="14" y="18" z="0.0"></viz:position>
+        <viz:color r="153" g="243" b="52"></viz:color>
+      </node>
+      <node id="e" label="e" start="2006-02-17" endopen="2006-02-27">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="97.67868"></viz:size>
+        <viz:position x="8" y="15" z="0.0"></viz:position>
+        <viz:color r="153" g="243" b="52"></viz:color>
+      </node>
+      <node id="f" label="f" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="2" y="17" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="g" label="g" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="-7" y="21" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="h" label="h" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="-9" y="15" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="i" label="i" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="-16" y="5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="j" label="j" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="6" y="-5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="k" label="k" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="6" y="-5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="l" label="l" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="6" y="-5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="m" label="m" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="6" y="-5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="n" label="n" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="6" y="-5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="o" label="o" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="6" y="-5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+      <node id="p" label="p" start="2006-02-17" endopen="2006-02-17">
+        <attvalues>
+          <attvalue for="modularity_class" value="1"></attvalue>
+        </attvalues>
+        <viz:size value="20.15233"></viz:size>
+        <viz:position x="6" y="-5" z="0.0"></viz:position>
+        <viz:color r="243" g="133" b="52"></viz:color>
+      </node>
+     </nodes>
+  </graph>
+</gexf>

@@ -1,0 +1,41 @@
+Information needed for threejs
+
+concepts:
+x, y, z coordinates
+radius of concepts
+granularity of shapes (m, n)
+color (rgb values)
+
+edges: start point and end point
+
+noodles:
+Eight points at top, eight points at bottom
+	varying width depending on weights
+color
+
+
+FILES:
+-- PROJECTNAME_meta-colors.three.txt --
+layercount [#of layers]
+colorcount [#of colors]
+[color #1]
+[color #2]
+[color #3]
+...
+
+-- PROJECTNAME_layers.three.txt --
+layer [layerIndex] [layerZ]
+cluster [clusterIndex] [clusterName] [cluster X,Y] [colorIndex]
+[conceptIndex(w/in layer)] [conceptName] [conceptRadius] [concept X,Y]
+...
+
+-- PROJECTNAME_edges.three.txt --
+edges
+layer [layerIndex]
+[nodeIndex] [nodeIndex]
+[nodeIndex] [nodeIndex]
+
+-- PROJECTNAME_noodles.three.txt --
+noodles
+[layerIndex0] [clusterName0] [layerIndex1] [clusterName1]
+...
